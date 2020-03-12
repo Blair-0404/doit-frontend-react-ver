@@ -1,0 +1,35 @@
+
+$borderColor:#d6d6d6;
+$testSize: 15px;
+
+.todo-list-section {
+  width: 300px;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid $borderColor;
+  border-radius: 3px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+
+  .title {
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+
+  .list-wrapper {
+    margin-bottom: 10px;
+
+    .item {
+      font-size: $testSize;
+      border: 1px solid #b4b4b4;
+      padding: 7px;
+    }
+
+  }
+
+  .add-item {
+    color: #d467db;
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
