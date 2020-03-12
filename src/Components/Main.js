@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import style from '../SCSS/TodeListHeader.scss';
-
-class Todogroup extends Component {
+class Main extends Component {
   render() {
     return (
       <div className="">
         <div className="">개인보드</div>
-        <div className="items-wrapper">
+        <div className="">
           <button>할일</button>
           <button>할일</button>
           <button>+</button>
@@ -17,4 +15,4 @@ class Todogroup extends Component {
   }
 }
 
-export default Todogroup;
+export default Main;

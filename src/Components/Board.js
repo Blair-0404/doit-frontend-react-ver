@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import style from '../SCSS/TodoList.scss';
+import style from '../SCSS/Board.scss';
 
 
-class TodoList extends Component {
+class Board extends Component {
   render() {
     return (
       <div className="todo-list-section">
@@ -18,4 +18,4 @@ class TodoList extends Component {
   }
 }
 
-export default TodoList;
+export default Board;
