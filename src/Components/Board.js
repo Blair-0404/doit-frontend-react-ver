@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from '../SCSS/Board.scss';
+import style from '../Scss/Board.scss';
 
 
 class Board extends Component {

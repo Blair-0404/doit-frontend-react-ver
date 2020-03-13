@@ -1,0 +1,83 @@
+$borderStyle: 0.5px white solid;
+$clickImg: pointer;
+$headerColor: #327dff;
+
+
+
+.header-section {
+
+  background-color: $headerColor;
+  color: white;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .header-left-section {
+
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    justify-content: space-between;
+
+
+    .menu {
+      cursor: $clickImg;
+    }
+
+  }
+
+  .header-center-section {
+    width: 110px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+
+
+    .title {
+      font-size: 25px;
+    }
+
+    .home-logo {
+      cursor: $clickImg;
+    }
+
+  }
+
+  .header-right-section {
+
+    width: 130px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+    justify-content: space-between;
+
+    .sign-in {
+
+      padding: 4px;
+      border: $borderStyle;
+      border-radius: 10px;
+      cursor: $clickImg;
+
+
+    }
+
+    .sign-up {
+
+      padding: 4px;
+      border: $borderStyle;
+      border-radius: 10px;
+      cursor: $clickImg;
+
+    }
+
+  }
+
+
+}
+
+
+
+
