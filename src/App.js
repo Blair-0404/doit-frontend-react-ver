@@ -5,6 +5,7 @@ import MainPage from "./Pages/MainPage"
 import BoardPage from "./Pages/BoardPage";
 import Footer from "./Components/Template/Footer";
 import SignIn from "../src/Components/SignIn"
+import SignUp from "./Components/SignUp";
 
 
 
@@ -15,7 +16,7 @@ class App extends Component {
         <Header />
         {/*<MainPage/>*/}
         {/*<BoardPage />*/}
-        <SignIn />
+        <SignUp />
       </div>
     );
   }

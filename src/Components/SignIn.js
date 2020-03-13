@@ -17,11 +17,11 @@ class SignIn extends Component {
         <div className={cx("input-wrapper")}>
           <label>
             <FontAwesomeIcon icon={faUser} size="1x"/>
-            <input type="text" name="name" placeholder={"   Please input your ID"} />
+            <input type="text" name="name" placeholder={"   ID"} />
           </label>
           <label>
             <FontAwesomeIcon icon={faKey} size="1x"/>
-            <input type="password" name="name" placeholder={"   Please input your PW"}/>
+            <input type="password" name="name" placeholder={"   Password"}/>
           </label>
         </div>
         <div className={cx("button-wrapper")}>

@@ -3,11 +3,11 @@ $signInColor: #327dff;
 $clickImg: pointer;
 
 
-.sign-in-section {
+.sign-up-section {
   display: flex;
   justify-content: center;
 
-  .sign-in-wrapper {
+  .sign-up-wrapper {
     width: 600px;
     border: 1px solid #838383;
     border-radius: 5px;
@@ -30,12 +30,17 @@ $clickImg: pointer;
         align-items: center;
         justify-content: space-between;
         margin-bottom: $formPadding;
+
+        input {
+          width: 540px;
+          height: 30px;
+
+        }
+
+        }
+
       }
 
-      input {
-        width: 540px;
-        height: 30px;
-      }
 
     }
 
@@ -45,14 +50,6 @@ $clickImg: pointer;
       flex-direction: row;
       justify-content: flex-end;
 
-      .login-button {
-        margin-right: 10px;
-        color: white;
-        padding: 5px;
-        background-color: $signInColor;
-        border-radius: 5px;
-        cursor: $clickImg;
-      }
 
       .sign-up-button {
         color: white;
@@ -64,4 +61,3 @@ $clickImg: pointer;
     }
 
   }
-}
