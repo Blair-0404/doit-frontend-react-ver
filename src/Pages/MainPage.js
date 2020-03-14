@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
-import { Link } from "react-router-dom";
-import Axios from "../Library/AxiosApi"
-import Main from "../Components/Main";
+import {Link} from "react-router-dom";
+import api from "../Library/api"
+import styles from '../Scss/MainPage.scss';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 
 
 class MainPage extends Component {
@@ -13,7 +16,7 @@ class MainPage extends Component {
       dataList: []
     };
 
-    Axios.post("http://tutor.philgookang.com/group.php", {}).then(result => {
+    api.post("http://tutor.philgookang.com/group.php", {}).then(result => {
       let state = this.state;
       state.dataList = result.data.lst;
       this.setState(state);
@@ -41,27 +44,37 @@ class MainPage extends Component {
 
   render() {
     return (
-      <div className="container">
-        {this.state.dataList.map((item, i) => {
+      <div className={cx("main-section")}>
+        <div className={cx("main-wrapper")}>
+
+
+        {this.state.dataList.map((val) => {
           return (
-            <div className="todo-group">
-              <div className="todo-group-head">
-                <h1>{item.name}</h1>
-              </div>
-              <div className="todo-group-body">
-                {item.lst.map((gg, i) => {
+
+            <div className={cx("board-group")}>
+
+              <div className={cx("board-group-title")}>{val.name}</div>
+
+              <div className={cx("board-item-wrapper")}>
+                {val.lst.map((val) => {
                   return (
-                    <Link to={"/details/" + gg.idx}>
-                      <div className="todo-group-item">
-                        {gg.name}
-                      </div>
-                    </Link>
+
+                    <div className={cx("board-item")}>
+                      <div className={cx("title")}>{val.name}</div>
+                      <div className={cx("contents")}>Search for the keywords to learn more about each warning.
+                      s</div>
+                      <Link to={"/details/" + val.idx}><div className={cx("more")}>more</div></Link>
+                    </div>
                   );
                 })}
+                <div className={cx("board-item")}>
+                  <div className={cx("add-btn")}> +</div>
+                </div>
               </div>
             </div>
           );
         })}
+      </div>
       </div>
     );
   }

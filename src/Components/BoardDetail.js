@@ -10,15 +10,15 @@ const response = () => {
 
 class BoardDetail extends Component {
 
-  constructor(prop) {
-    super();
-
-    console.log(prop.todoname);
-
-    this.state = {
-      tode : props.todo;
-    }
-  }
+  // constructor(prop) {
+  //   super();
+  //
+  //   console.log(prop.todoname);
+  //
+  //   this.state = {
+  //     tode : props.todo;
+  //   }
+  // }
 
   render() {
     return (
