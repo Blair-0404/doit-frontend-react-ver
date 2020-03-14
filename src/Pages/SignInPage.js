@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
 import styles from '../Scss/SignIn.scss';
 import classNames from 'classnames/bind';
 import {faUser} from "@fortawesome/free-solid-svg-icons";
@@ -26,7 +27,7 @@ class SignInPage extends Component {
         </div>
         <div className={cx("button-wrapper")}>
           <div className={cx("login-button")}>LOGIN</div>
-          <div className={cx("sign-up-button")}>SIGN UP</div>
+          <div className={cx("sign-up-button")}><Link to={"/signup"}>SIGN UP</Link></div>
         </div>
         </div>
       </div>
