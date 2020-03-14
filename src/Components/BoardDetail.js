@@ -9,6 +9,17 @@ const response = () => {
 };
 
 class BoardDetail extends Component {
+
+  constructor(prop) {
+    super();
+
+    console.log(prop.todoname);
+
+    this.state = {
+      tode : props.todo;
+    }
+  }
+
   render() {
     return (
       <div className={cx("board-detail-section")}>
