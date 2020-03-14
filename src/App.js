@@ -4,8 +4,8 @@ import styles from './Scss/App.scss';
 import MainPage from "./Pages/MainPage"
 import BoardPage from "./Pages/BoardPage";
 import Footer from "./Components/Template/Footer";
-import SignIn from "../src/Components/SignIn"
-import SignUp from "./Components/SignUp";
+import SignInPage from "./Pages/SignInPage"
+import SignUpPage from "./Pages/SignUpPage";
 
 
 
@@ -15,8 +15,8 @@ class App extends Component {
       <div>
         <Header />
         {/*<MainPage/>*/}
-        {/*<BoardPage />*/}
-        <SignUp />
+        <BoardPage />
+        {/*<SignUpPage />*/}
       </div>
     );
   }

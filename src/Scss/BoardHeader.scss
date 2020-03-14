@@ -1,0 +1,54 @@
+$signInColor: #327dff;
+$clickImg: pointer;
+
+.board-header-section {
+  display: flex;
+  justify-content: center;
+
+  .board-header-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    padding: 30px;
+
+    .board-title {
+      margin-right: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #333234
+    }
+
+    .board-button-wrapper {
+      display: flex;
+      flex-direction: row;
+
+      .setting {
+        margin-right: 20px;
+        color: white;
+        padding: 5px;
+        background-color: $signInColor;
+        border-radius: 5px;
+        cursor: $clickImg;
+      }
+
+      .invite {
+        margin-right: 20px;
+        color: white;
+        padding: 5px;
+        background-color: $signInColor;
+        border-radius: 5px;
+        cursor: $clickImg;
+      }
+
+      .add-list {
+        color: white;
+        padding: 5px;
+        background-color: $signInColor;
+        border-radius: 5px;
+        cursor: $clickImg;
+      }
+
+    }
+
+  }
+}

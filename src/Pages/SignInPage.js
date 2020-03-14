@@ -8,7 +8,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 const cx = classNames.bind(styles);
 
 
-class SignIn extends Component {
+class SignInPage extends Component {
   render() {
     return (
       <div className={cx("sign-in-section")}>
@@ -34,5 +34,5 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn;
+export default SignInPage;
 

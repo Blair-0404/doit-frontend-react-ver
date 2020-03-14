@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import Board from "../Components/Board";
-// import style from '../Scss/Board.scss';
+import BoardDetail from "../Components/BoardDetail";// import style from '../Scss/BoardDetail.scss';
 import BoardHeader from "../Components/BoardHeader";
 
 
@@ -11,10 +10,7 @@ class App extends Component {
     return (
       <div>
         <BoardHeader/>
-        <Board/>
-        <Board/>
-        <Board/>
-        <Board/>
+        <BoardDetail/>
       </div>
     );
   }
