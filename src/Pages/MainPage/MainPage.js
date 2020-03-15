@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
-import api from "../Library/api"
-import styles from '../Scss/MainPage.scss';
+import api from "../../api"
+import styles from './MainPage.scss';
 import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import BoardDetail from "../Components/BoardDetail";
-import BoardHeader from "../Components/BoardHeader";
-import api from "../Library/api"
+import BoardDetail from "./BoardDetail/BoardDetail";
+import BoardHeader from "./BoardHeader/BoardHeader";
+import api from "../../api"
 
 
 

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import styles from '../Scss/SignUp.scss';
+import styles from './SignUp.scss';
 import classNames from 'classnames/bind';
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faKey} from "@fortawesome/free-solid-svg-icons";

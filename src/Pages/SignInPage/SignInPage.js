@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
-import styles from '../Scss/SignIn.scss';
+import styles from './SignIn.scss';
 import classNames from 'classnames/bind';
 import {faUser} from "@fortawesome/free-solid-svg-icons";
 import {faKey} from "@fortawesome/free-solid-svg-icons";

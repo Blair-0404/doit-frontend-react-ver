@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import styles from '../Scss/BoardHeader.scss';
+import styles from './BoardHeader.scss';
 import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);

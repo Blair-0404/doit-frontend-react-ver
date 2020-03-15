@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Switch, Route} from "react-router-dom";
-import Header from "./Components/Template/Header";
-import MainPage from "./Pages/MainPage"
-import BoardPage from "./Pages/BoardPage";
-import SignInPage from "./Pages/SignInPage"
-import SignUpPage from "./Pages/SignUpPage";
+import Header from "../Header/Header";
+import MainPage from "../../Pages/MainPage/MainPage"
+import BoardPage from "../../Pages/BoradPage/BoardPage";
+import SignInPage from "../../Pages/SignInPage/SignInPage"
+import SignUpPage from "../../Pages/SignUpPage/SignUpPage";
 
 
 class App extends Component {

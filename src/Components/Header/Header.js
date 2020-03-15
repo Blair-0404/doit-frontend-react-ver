@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link } from "react-router-dom";
-import styles from '../../Scss/Header.scss';
+import styles from './Header.scss';
 import classNames from 'classnames/bind';
 import {faHome} from "@fortawesome/free-solid-svg-icons";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
