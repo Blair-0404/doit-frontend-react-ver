@@ -10,9 +10,3 @@ module.exports = {
   }
 };
 
-
-import axios from "axios";
-
-// 유니 피드백 코드
-const base_url = 'https://api.themoviedb.org/3';
-const api_key = '44ebf9cf927b173d893cd89ea3db2e1e';
