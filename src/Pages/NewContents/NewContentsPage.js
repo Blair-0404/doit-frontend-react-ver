@@ -21,7 +21,7 @@ class NewContentsPage extends Component {
         <div className={cx("new-contents-wrapper")}>
           <div className={cx("board-title")}>새로운 카드 추가</div>
           <input type="text" name="name" placeholder={"   Card Name"} />
-          <input type="textarea" name="name" placeholder={"   Description"} />
+          <textarea className={cx("Description")} placeholder={"   Description"}></textarea>
             <div onClick={response} className={cx("close")}>CLOSE</div>
             <div onClick={response} className={cx("save")}> SAVE</div>
           </div>

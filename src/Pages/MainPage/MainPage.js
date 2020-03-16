@@ -68,7 +68,7 @@ class MainPage extends Component {
                   );
                 })}
                 <div className={cx("board-item")}>
-                  <div className={cx("add-btn")}> +</div>
+                  <Link to={"/newcontents"}><div className={cx("add-btn")}> +</div></Link>
                 </div>
               </div>
             </div>

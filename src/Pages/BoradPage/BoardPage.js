@@ -8,14 +8,15 @@ import api from "../../api"
 
 
 class BoardPage extends Component {
-  //
-  // constructor(prop) {
-  //   super();
-  //   console.log(prop);
-  //
-  //   this.state = {
-  //     dataList: []
-  //   };
+
+  constructor(props) {
+    super();
+    console.log(props);
+
+    this.state = {
+      group_idxx: props.match.params.group_idx
+    };
+  }
   //
   //   api.post("http://tutor.philgookang.com/detail.php", {"group_idx": prop.match.params["group_idx"]}).then(result => {
   //     var state = this.state;
@@ -50,8 +51,8 @@ class BoardPage extends Component {
     return (
       <div>
         {/*<BoardHeader todoname={todo.name}/>*/}
-        <BoardHeader/>
-        <BoardDetail/>
+        <BoardHeader save_group_id={this.state.group_idxx}/>
+        <BoardDetail save_group_id={this.state.group_idxx}/>
       </div>
     );
   }
