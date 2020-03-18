@@ -11,11 +11,11 @@ class BoardPage extends Component {
 
   constructor(props) {
     super();
-    console.log(props);
 
     this.state = {
-      group_idxx: props.match.params.group_idx
+      boardGroupIdx: props.match.params.group_idx
     };
+
   }
   //
   //   api.post("http://tutor.philgookang.com/detail.php", {"group_idx": prop.match.params["group_idx"]}).then(result => {
@@ -51,8 +51,8 @@ class BoardPage extends Component {
     return (
       <div>
         {/*<BoardHeader todoname={todo.name}/>*/}
-        <BoardHeader save_group_id={this.state.group_idxx}/>
-        <BoardDetail save_group_id={this.state.group_idxx}/>
+        <BoardHeader boardGroupIdx={this.state.boardGroupIdx}/>
+        <BoardDetail boardGroupIdx={this.state.boardGroupIdx}/>
       </div>
     );
   }

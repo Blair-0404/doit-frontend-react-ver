@@ -17,6 +17,15 @@ module.exports = {
     };
 
     return axios.get(url, params, { headers:headers })
+  },
+
+  put : function(url, params) {
+    let headers = {
+      'Content-Type' : 'application/json',
+      'Authorization' : ''
+    };
+
+    return axios.put(url, params, { headers:headers })
   }
 };
 
