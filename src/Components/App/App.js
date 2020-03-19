@@ -6,6 +6,7 @@ import BoardPage from "../../Pages/BoradPage/BoardPage";
 import SignInPage from "../../Pages/SignInPage/SignInPage"
 import SignUpPage from "../../Pages/SignUpPage/SignUpPage";
 import NewContentsPage from "../../Pages/NewContents/NewContentsPage";
+import SearchId from "../../Pages/SearchId/SearchId";
 
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
           <Route exact path="/" component={MainPage}/>
           <Route exact path="/details/:group_idx" component={BoardPage}/>
           <Route exact path="/signin" component={SignInPage}/>
+          <Route exact path="/signin/searchid" component={SearchId}/>
           <Route exact path="/signup" component={SignUpPage}/>
           <Route exact path="/newcontents" component={NewContentsPage}/>
         </Switch>

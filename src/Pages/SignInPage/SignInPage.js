@@ -5,11 +5,14 @@ import classNames from 'classnames/bind';
 import {faUser} from "@fortawesome/free-solid-svg-icons";
 import {faKey} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import api from "../../api"
+
 
 const cx = classNames.bind(styles);
 
 
 class SignInPage extends Component {
+
   render() {
     return (
       <div className={cx("sign-in-section")}>
@@ -26,6 +29,7 @@ class SignInPage extends Component {
           </label>
         </div>
         <div className={cx("button-wrapper")}>
+          <div className={cx("id-search-button")}><Link to={"/signin/searchid"}>아이디 조회</Link></div>
           <div className={cx("login-button")}>LOGIN</div>
           <div className={cx("sign-up-button")}><Link to={"/signup"}>SIGN UP</Link></div>
         </div>

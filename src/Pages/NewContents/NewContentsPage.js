@@ -19,13 +19,17 @@ class NewContentsPage extends Component {
     return (
       <div className={cx("new-contents-section")}>
         <div className={cx("new-contents-wrapper")}>
-          <div className={cx("board-title")}>새로운 카드 추가</div>
-          <input type="text" name="name" placeholder={"   Card Name"} />
-          <textarea className={cx("Description")} placeholder={"   Description"}></textarea>
+          <div className={cx("board-title")}>새로운 보드 추가</div>
+          <div className={cx("input-wrapper")}>
+            <input type="text" name="name" placeholder={"   Card Name"}/>
+            <textarea className={cx("Description")} placeholder={"   Description"}></textarea>
+          </div>
+          <div className={cx("button-wrapper")}>
             <div onClick={response} className={cx("close")}>CLOSE</div>
             <div onClick={response} className={cx("save")}> SAVE</div>
           </div>
         </div>
+      </div>
     );
   }
 }

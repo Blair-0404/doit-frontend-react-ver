@@ -13,6 +13,7 @@ class MainPage extends Component {
     super();
     console.log(props);
 
+    // 아직 서버가 안열렸다.
     // this.state = {
     //   boardGroupList: []
     // };
@@ -24,50 +25,55 @@ class MainPage extends Component {
     // });
 
     let tmpResponseRet = {
-      "list": [
+      "myBoard": [
         {
-          "name": "개인보드",
-          "lst": [
+          "teamName": "team A",
+          "list": [
+            {
+              "boardId": 5,
+              "title": "spring study",
+              "description": "스프링스터디모임",
+              "teamName": "team A"
+            },
+            {
+              "boardId": 6,
+              "title": "spring study",
+              "description": "스프링스터디모임",
+              "teamName": "team A"
+            },
             {
               "boardId": 1,
-              "title": "Important List",
-              "description": ""
-            },
-            {
-              "boardId": 2,
-              "title": "Wish List",
-              "description": ""
-            },
-            {
-              "boardId": 3,
               "title": "Mommy List",
-              "description": ""
+              "description": "",
+              "teamName": "team A"
             }
           ]
         },
         {
-          "name": "미니 프로젝트 보드",
+          "teamName": "teamB",
           "list": [
             {
-              "boardId": 1,
-              "title": "Important List",
-              "description": ""
-            },
-            {
               "boardId": 2,
-              "title": "Wish List",
-              "description": ""
+              "title": "BoardC",
+              "description": "this is board C",
+              "teamName": "teamB"
             },
             {
               "boardId": 3,
-              "title": "Mommy List",
-              "description": ""
+              "title": "BoardD",
+              "description": "this is board D",
+              "teamName": "teamB"
+            },
+            {
+              "boardId": 4,
+              "title": "BoardE",
+              "description": "this is board E",
+              "teamName": "teamB"
             }
           ]
         }
       ]
     };
-
 
     this.state = { // 이 페이지에서 다뤄야 할 것들을 state에 담기
       "dataList": tmpResponseRet
@@ -81,15 +87,15 @@ class MainPage extends Component {
         <div className={cx("main-wrapper")}>
 
 
-          {this.state.dataList.list.map((val) => {
+          {this.state.dataList.myBoard.map((val) => {
             return (
 
               <div className={cx("board-group")}>
 
-                <div className={cx("board-group-title")}>{val.name}</div>
+                <div className={cx("board-group-title")}>{val.teamName}</div>
 
                 <div className={cx("board-item-wrapper")}>
-                  {val.lst.map((val) => {
+                  {val.list.map((val) => {
                     return (
 
                       <div className={cx("board-item")}>
@@ -114,48 +120,6 @@ class MainPage extends Component {
       </div>
     );
   }
-
-  // render() {
-  //   return (
-  //     <div className={cx("main-section")}>
-  //       <div className={cx("main-wrapper")}>
-  //
-  //
-  //         {this.state.boardGroupList.map((val) => {
-  //           return (
-  //
-  //             <div className={cx("board-group")}>
-  //
-  //               <div className={cx("board-group-title")}>{val.name}</div>
-  //
-  //               <div className={cx("board-item-wrapper")}>
-  //                 {val.lst.map((val) => {
-  //                   return (
-  //
-  //                     <div className={cx("board-item")}>
-  //                       <div className={cx("title")}>{val.name}</div>
-  //                       <div className={cx("contents")}>Search for the keywords to learn more about each warning.
-  //                         s
-  //                       </div>
-  //                       <Link to={"/details/" + val.idx}>
-  //                         <div className={cx("more")}>more</div>
-  //                       </Link>
-  //                     </div>
-  //                   );
-  //                 })}
-  //                 <div className={cx("board-item")}>
-  //                   <Link to={"/newcontents"}>
-  //                     <div className={cx("add-btn")}> +</div>
-  //                   </Link>
-  //                 </div>
-  //               </div>
-  //             </div>
-  //           );
-  //         })}
-  //       </div>
-  //     </div>
-  //   );
-  // }
 }
 
 export default MainPage;

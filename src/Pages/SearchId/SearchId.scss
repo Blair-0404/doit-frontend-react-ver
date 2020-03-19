@@ -3,11 +3,11 @@ $signInColor: #327dff;
 $clickImg: pointer;
 
 
-.sign-in-section {
+.search-id-section {
   display: flex;
   justify-content: center;
 
-  .sign-in-wrapper {
+  .search-id-wrapper {
     width: 600px;
     border: 1px solid #838383;
     border-radius: 5px;
@@ -21,21 +21,28 @@ $clickImg: pointer;
       color: white;
     }
 
-    .input-wrapper {
+    .info-wrapper {
       padding: 15px 15px 0 15px;
 
-      label {
+      div {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        //justify-content: space-between;
         margin-bottom: $formPadding;
+
+        .icon {
+          padding-bottom: 13px;
+          margin-right: 3px;
+        }
+
+        div {
+          width: 540px;
+          height: 30px;
+          //border: 1px solid #dcdcdc;
+        }
       }
 
-      input {
-        width: 540px;
-        height: 30px;
-      }
 
     }
 
@@ -45,25 +52,8 @@ $clickImg: pointer;
       flex-direction: row;
       justify-content: flex-end;
 
-      .id-search-button {
-        margin-right: 10px;
-        color: gray;
-        padding: 5px;
-        font-size: 11px;
-        line-height: 2;
-        cursor: $clickImg;
-      }
 
-      .login-button {
-        margin-right: 10px;
-        color: white;
-        padding: 5px;
-        background-color: $signInColor;
-        border-radius: 5px;
-        cursor: $clickImg;
-      }
-
-      .sign-up-button {
+      .close {
         color: white;
         padding: 5px;
         background-color: $signInColor;

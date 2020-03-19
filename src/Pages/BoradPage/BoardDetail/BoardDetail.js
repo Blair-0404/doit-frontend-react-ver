@@ -3,6 +3,7 @@ import styles from './BoardDetail.scss';
 import classNames from "classnames/bind";
 import api from "../../../api";
 import BoardHeader from "../BoardHeader/BoardHeader";
+import {Link} from "react-router-dom";
 
 const cx = classNames.bind(styles);
 
@@ -115,7 +116,9 @@ class BoardDetail extends Component {
                       );
                     })}
                   </div>
-                  <div onClick={response} className={cx("add-card")}> + 새 카드 추가하기</div>
+                  <Link to={"/newcontents"}>
+                    <div className={cx("add-card")}> + 새 카드 추가하기</div>
+                  </Link>
                 </div>
               );
             })}
