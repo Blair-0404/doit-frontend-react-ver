@@ -22,7 +22,7 @@ class NewContentsPage extends Component {
           <div className={cx("board-title")}>새로운 보드 추가</div>
           <div className={cx("input-wrapper")}>
             <input type="text" name="name" placeholder={"   Card Name"}/>
-            <textarea className={cx("Description")} placeholder={"   Description"}></textarea>
+            <textarea className={cx("Description")} placeholder={"   Description"}/>
           </div>
           <div className={cx("button-wrapper")}>
             <div onClick={response} className={cx("close")}>CLOSE</div>
