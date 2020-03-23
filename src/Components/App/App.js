@@ -5,7 +5,7 @@ import MainPage from "../../Pages/MainPage/MainPage"
 import BoardPage from "../../Pages/BoradPage/BoardPage";
 import SignInPage from "../../Pages/SignInPage/SignInPage"
 import SignUpPage from "../../Pages/SignUpPage/SignUpPage";
-import NewContentsPage from "../../Pages/NewContents/NewContentsPage";
+import AddBoardPage from "../../Pages/addBoardPage/addBoardPage";
 import SearchId from "../../Pages/SearchId/SearchId";
 
 
@@ -20,7 +20,7 @@ class App extends Component {
           <Route exact path="/signin" component={SignInPage}/>
           <Route exact path="/signin/searchid" component={SearchId}/>
           <Route exact path="/signup" component={SignUpPage}/>
-          <Route exact path="/newcontents" component={NewContentsPage}/>
+          <Route exact path="/newcontents" component={AddBoardPage}/>
         </Switch>
       </div>
     );

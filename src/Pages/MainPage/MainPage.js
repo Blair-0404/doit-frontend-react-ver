@@ -4,6 +4,8 @@ import api from "../../api"
 import styles from './MainPage.scss';
 import classNames from 'classnames/bind';
 
+import AddBoardPage from "../addBoardPage/addBoardPage"
+
 const cx = classNames.bind(styles);
 
 
@@ -24,8 +26,10 @@ class MainPage extends Component {
     //   this.setState(state);
     // });
 
-    let tmpResponseRet = {
-      "myBoard": [
+    let tmpResponseRet =
+      {
+      "myBoard":
+        [
         {
           "teamName": "team A",
           "list": [
@@ -76,18 +80,30 @@ class MainPage extends Component {
     };
 
     this.state = { // 이 페이지에서 다뤄야 할 것들을 state에 담기
-      "dataList": tmpResponseRet
+      "dataList": tmpResponseRet,
+      "showBoard" : 0,
+      "boardGroup" : 0
     };
-    console.log(this.state.dataList)
+    // console.log(this.state.dataList)
   }
+
+  addBoard = (e) => {
+    // console.log(e.currentTarget.getAttribute)
+    let state = this.state;
+    state.showBoard = 1;
+    state.boardGroup = e.currentTarget.getAttribute("dataIdx");
+    this.setState(state);
+  }
+
 
   render() {
     return (
+      <div>
       <div className={cx("main-section")}>
         <div className={cx("main-wrapper")}>
 
 
-          {this.state.dataList.myBoard.map((val) => {
+          {this.state.dataList.myBoard.map((val, i) => {
             return (
 
               <div className={cx("board-group")}>
@@ -97,7 +113,6 @@ class MainPage extends Component {
                 <div className={cx("board-item-wrapper")}>
                   {val.list.map((val) => {
                     return (
-
                       <div className={cx("board-item")}>
                         <div className={cx("title")}>{val.title}</div>
                         <div className={cx("contents")}>{val.description}</div>
@@ -108,15 +123,17 @@ class MainPage extends Component {
                     );
                   })}
                   <div className={cx("board-item")}>
-                    <Link to={"/newcontents"}>
-                      <div className={cx("add-btn")}> +</div>
-                    </Link>
+                      <div onClick={this.addBoard} dataIdx={i} className={cx("add-btn")}> + </div>
                   </div>
                 </div>
               </div>
             );
           })}
         </div>
+      </div>
+        { this.state.showBoard === 1 ?
+          <AddBoardPage parent={this}/>
+         : null }
       </div>
     );
   }

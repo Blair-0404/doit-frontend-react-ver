@@ -4,13 +4,12 @@ import classNames from "classnames/bind";
 import api from "../../../api";
 import BoardHeader from "../BoardHeader/BoardHeader";
 import {Link} from "react-router-dom";
+import AddCardList from "../../addCardList/addCardList";
 
 const cx = classNames.bind(styles);
-
 const response = () => {
   alert("클릭됬습니다.")
 };
-
 class BoardDetail extends Component {
 
   constructor(prop) {
@@ -53,7 +52,6 @@ class BoardDetail extends Component {
           "position": 1
         }]
       },
-
         {
           "id": 2,
           "name": "testCardList2",
@@ -68,7 +66,73 @@ class BoardDetail extends Component {
             "title": "testCardB",
             "description": "test card B",
             "position": 1
-          }]
+          }],
+
+        },{
+          "id": 2,
+          "name": "testCardList2",
+          "position": 0,
+          "cards": [{
+            "id": 1,
+            "title": "testCardA",
+            "description": "test card A",
+            "position": 0
+          }, {
+            "id": 2,
+            "title": "testCardB",
+            "description": "test card B",
+            "position": 1
+          }],
+
+        },{
+          "id": 2,
+          "name": "testCardList2",
+          "position": 0,
+          "cards": [{
+            "id": 1,
+            "title": "testCardA",
+            "description": "test card A",
+            "position": 0
+          }, {
+            "id": 2,
+            "title": "testCardB",
+            "description": "test card B",
+            "position": 1
+          }],
+
+        },{
+          "id": 2,
+          "name": "testCardList2",
+          "position": 0,
+          "cards": [{
+            "id": 1,
+            "title": "testCardA",
+            "description": "test card A",
+            "position": 0
+          }, {
+            "id": 2,
+            "title": "testCardB",
+            "description": "test card B",
+            "position": 1
+          }],
+
+        },
+        {
+          "id": 2,
+          "name": "testCardList2",
+          "position": 0,
+          "cards": [{
+            "id": 1,
+            "title": "testCardA",
+            "description": "test card A",
+            "position": 0
+          }, {
+            "id": 2,
+            "title": "testCardB",
+            "description": "test card B",
+            "position": 1
+          }],
+
         }],
 
 
@@ -95,36 +159,51 @@ class BoardDetail extends Component {
     // 연습용 서버 tmpResult를 사용하기위해서 잠시 state를 아래로 옮겼다.
       this.state = {
         "dataList": tmpResult,
+        "showBoard" : 0,
+        "boardGroup" : 0,
         "tmp_group_id": prop.boardGroupIdx // prop["group_id"] 공백이 있을경우 활
       };
       console.log(this.state)
     }
 
+  addBoard = (e) => {
+    // console.log(e.currentTarget.getAttribute)
+    let state = this.state;
+    state.showBoard = 1;
+    state.boardGroup = e.currentTarget.getAttribute("dataIdx");
+    this.setState(state);
+  }
+
     render()
     {
       return (
+        <div>
         <div className={cx("board-detail-section")}>
           <div className={cx("board-list-wrapper")}>
-            {this.state.dataList.cardLists.map(item => {
+            {this.state.dataList.cardLists.map((item, i) => {
               return (
+                // <div className={cx("list-wrapper")}>
                 <div className={cx("list")}>
                   <div className={cx("title")}>{item.name}</div>
                   <div className={cx("cards")}>
-                    {item.cards.map(item2 => {
+                    {item.cards.map((item2) => {
                       return (
                         <div onClick={response} className={cx("card")}>{item2.title}</div>
                       );
                     })}
                   </div>
-                  <Link to={"/newcontents"}>
-                    <div className={cx("add-card")}> + 새 카드 추가하기</div>
-                  </Link>
+                    <div onClick={this.addBoard} dataIdx={i} className={cx("add-card")}> + 새 카드 추가하기</div>
                 </div>
+                // </div>
               );
             })}
 
 
           </div>
+        </div>
+          { this.state.showBoard === 1 ?
+            <AddCardList parent={this}/>
+            : null }
         </div>
       );
     }
